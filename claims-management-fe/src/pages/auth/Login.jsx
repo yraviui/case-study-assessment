@@ -1,11 +1,13 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import { useAuth } from '../../hooks/auth'; 
 import { useNavigate } from 'react-router-dom';
+import { APIContext } from '../../context/custom';
 
 const Login = () => {
   // Destructure as an Object to match Setup 1 from your auth context configuration
   const { auth, setAuth } = useAuth(); 
   const navigate = useNavigate(); 
+  const API_URL = useContext(APIContext).apiUrl;
   
   const [formData, setFormData] = useState({
     email: '',

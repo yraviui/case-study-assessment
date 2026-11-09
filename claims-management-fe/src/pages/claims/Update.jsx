@@ -1,10 +1,11 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import toast from 'react-hot-toast';
 import { useAuth } from '../../hooks/auth';
+import { APIContext } from '../../context/custom';
 
 const Update = ({ claimData, onSuccess, onClose }) => {
   const { auth } = useAuth();
-
+  const API_URL = useContext(APIContext).apiUrl;
   // -------------------------------------------------------
   // FORM STATE SEEDED WITH ACTIVE CLAIM DATA PROPERTIES
   // -------------------------------------------------------

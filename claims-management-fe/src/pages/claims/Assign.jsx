@@ -1,11 +1,12 @@
 
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import { useAuth } from '../../hooks/auth';
 import toast from 'react-hot-toast';
 import * as Ri from 'react-icons/ri';
+import { APIContext } from '../../context/custom';
 
 const Assign = ({ claimData, onSuccess, onClose }) => {
-
+  const API_URL = useContext(APIContext).apiUrl;
   const { auth } = useAuth();
 
   const claimId = claimData?._id || claimData?.id;

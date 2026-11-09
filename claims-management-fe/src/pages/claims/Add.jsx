@@ -1,9 +1,11 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import toast from 'react-hot-toast';
 import { useAuth } from '../../hooks/auth';
+import { APIContext } from '../../context/custom';
 
 const Add = ({ onSuccess, onClose }) => {
   const { auth } = useAuth();
+  const API_URL = useContext(APIContext).apiUrl;
 
   // -------------------------------------------------------
   // FORM STATE ALIGNED TO MONGOOSE SCHEMA

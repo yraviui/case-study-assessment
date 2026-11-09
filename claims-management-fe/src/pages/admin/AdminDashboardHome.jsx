@@ -162,6 +162,7 @@ const PaginationNav = ({
 const AdminDashboardHome = () => {
 
   const { auth } = useAuth();
+  const API_URL = useContext(APIContext).apiUrl;
 
   // =======================================================
   // CLAIMS STATE

@@ -1,6 +1,7 @@
-import React, { useState, useEffect, lazy, Suspense } from 'react';
+import React, { useState, useEffect, lazy, Suspense, useContext } from 'react';
 import DashboardHeader from '../components/DashboardHeader';
 import ReportUpdates from '../components/ReportUpdates';
+import { APIContext } from '../context/custom';
 
 // Lazy load the CustomerTable component bundle asset
 const CustomerTable = lazy(() => import('../components/CustomerTable'));
@@ -32,6 +33,7 @@ const Customers = () => {
   const [isLoadingData, setIsLoadingData] = useState(true);
   // ✨ Added an error state to handle server drops or connection failures gracefully
   const [error, setError] = useState(null);
+  const API_URL = useContext(APIContext).apiUrl;
 
   useEffect(() => {
     // AbortController cleans up incomplete network threads if the user navigates away mid-request

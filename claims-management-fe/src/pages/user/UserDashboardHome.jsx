@@ -4,6 +4,7 @@ import React, {
   useEffect,
   useCallback,
   useMemo,
+  useContext,
 } from 'react';
 
 import { useAuth } from '../../hooks/auth';
@@ -13,6 +14,7 @@ import Popup from '../popup/Popup';
 
 import DashboardHeader from '../../components/DashboardHeader';
 import ReportClaimsUpdates from '../../components/ReportClaimsUpdates';
+import { APIContext } from '../../context/custom';
 
 // =========================================================
 // CONSTANTS
@@ -169,7 +171,7 @@ const PaginationNav = ({
 
 const UserDashboardHome = () => {
   const { auth } = useAuth();
-
+  const API_URL = useContext(APIContext).apiUrl;
   // =======================================================
   // USER INFORMATION
   // =======================================================

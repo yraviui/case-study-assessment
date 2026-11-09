@@ -1,5 +1,5 @@
 
-import React, { useState, useEffect, useCallback, useMemo, } from 'react';
+import React, { useState, useEffect, useCallback, useMemo, useContext, } from 'react';
 
 import { useAuth } from '../../hooks/auth';
 import * as Ri from 'react-icons/ri';
@@ -10,6 +10,7 @@ import Update from '../claims/Update';
 import DashboardHeader from '../../components/DashboardHeader';
 import ReportClaimsUpdates from '../../components/ReportClaimsUpdates';
 import toast from 'react-hot-toast';
+import { APIContext } from '../../context/custom';
 
 // =========================================================
 // CONSTANTS
@@ -155,7 +156,7 @@ const PaginationNav = ({
 
 const ViewerDashboardHome = () => {
   const { auth } = useAuth();
-
+  const API_URL = useContext(APIContext).apiUrl;
   // =======================================================
   // CLAIMS STATE
   // =======================================================

@@ -1,6 +1,8 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
+import { APIContext } from '../../context/custom';
 
 const Register = () => {
+  const API_URL = useContext(APIContext).apiUrl;
   const [formData, setFormData] = useState({
     name: '',
     email: '',

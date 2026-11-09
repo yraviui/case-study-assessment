@@ -1,14 +1,16 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 // ✨ Import all icons as a single namespace object
 import * as Ri from "react-icons/ri"; 
 import menuData from '../assets/data/menuitemsuser.json'; 
 import { useAuth } from '../hooks/auth'; // Ensure the path correctly points to your context hook
+import { APIContext } from '../context/custom';
 
 const SidebarUser = ({ dashboardType = "user" }) => {
   const [isOpen, setIsOpen] = useState(true);
   const location = useLocation();
   const navigate = useNavigate();
+  const API_URL = useContext(APIContext).apiUrl;
   
   const { auth, setAuth } = useAuth();
   const menuItems = menuData?.menuItems || [];
