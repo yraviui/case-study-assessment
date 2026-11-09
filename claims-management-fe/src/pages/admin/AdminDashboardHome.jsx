@@ -4,6 +4,7 @@ import React, {
   useEffect,
   useCallback,
   useMemo,
+  useContext,
 } from 'react';
 
 import { useAuth } from '../../hooks/auth';
@@ -19,6 +20,7 @@ import DashboardHeader from '../../components/DashboardHeader';
 import ReportClaimsUpdates from '../../components/ReportClaimsUpdates';
 
 import toast from 'react-hot-toast';
+import { APIContext } from '../../context/custom';
 
 // =========================================================
 // CONSTANTS
