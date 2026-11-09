@@ -7,10 +7,12 @@ import { AuthProvider } from './hooks/auth.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
+    <APIContext.Provider value={{ apiUrl: 'https://case-study-assessment-production.up.railway.app' }}>
      <AuthProvider>
       <BrowserRouter>
         <App />
       </BrowserRouter>
      </AuthProvider>
+    </APIContext.Provider>
   </StrictMode>,
 )

@@ -216,7 +216,7 @@ const AdminDashboardHome = () => {
       }
 
       const response = await fetch(
-        'http://localhost:5000/api/claims',
+        `${API_URL}/api/claims`,
         {
           method: 'GET',
 
@@ -602,7 +602,7 @@ const AdminDashboardHome = () => {
       setDeletingClaimId(claimId);
 
       const response = await fetch(
-        `http://localhost:5000/api/claims/${claimId}`,
+        `${API_URL}/api/claims/${claimId}`,
         {
           method: 'DELETE',
 

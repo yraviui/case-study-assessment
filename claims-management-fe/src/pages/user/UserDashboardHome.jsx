@@ -230,7 +230,7 @@ const UserDashboardHome = () => {
       }
 
       const response = await fetch(
-        'http://localhost:5000/api/claims/my-assigned',
+        `${API_URL}/api/claims/my-assigned`,
         {
           method: 'GET',
 

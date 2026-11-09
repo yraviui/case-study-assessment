@@ -96,7 +96,7 @@ const Assign = ({ claimData, onSuccess, onClose }) => {
       setIsSubmitting(true);
 
       const response = await fetch(
-        `http://localhost:5000/api/claims/${claimId}/assign`,
+        `${API_URL}/api/claims/${claimId}/assign`,
         {
           method: 'PATCH',
 

@@ -79,7 +79,7 @@ const Update = ({ claimData, onSuccess, onClose }) => {
       };
 
       // PATCH API request targeted towards parameter route locator index entry
-      const response = await fetch(`http://localhost:5000/api/claims/${claimId}`, {
+      const response = await fetch(`${API_URL}/api/claims/${claimId}`, {
         method: 'PATCH',
         headers: {
           'Content-Type': 'application/json',

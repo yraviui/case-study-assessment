@@ -9,6 +9,7 @@ const Sidebar = ({ dashboardType = "user" }) => {
   const [isOpen, setIsOpen] = useState(true);
   const location = useLocation();
   const navigate = useNavigate();
+  const API_URL = useContext(APIContext).apiUrl;
   
   const { auth, setAuth } = useAuth();
   const menuItems = menuData?.menuItems || [];
@@ -21,7 +22,7 @@ const Sidebar = ({ dashboardType = "user" }) => {
   const handleLogout = async () => {
     try {
       // Best Practice: Call the server to destroy your Refresh Token session database side
-      await fetch('http://localhost:5000/api/auth/logout', {
+      await fetch(`${API_URL}/api/auth/logout`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
