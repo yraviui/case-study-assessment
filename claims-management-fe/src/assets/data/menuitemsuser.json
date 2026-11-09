@@ -1,0 +1,5 @@
+{
+  "menuItems": [
+    { "name": "Dashboard", "icon": "RiKey2Line", "path": "", "hasSubmenu": false }
+  ]
+}

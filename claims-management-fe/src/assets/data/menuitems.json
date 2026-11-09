@@ -1,0 +1,10 @@
+{
+  "menuItems": [
+    { "name": "Dashboard", "icon": "RiKey2Line", "path": "", "hasSubmenu": false },
+    { "name": "Product", "icon": "RiBox3Line", "path": "product", "hasSubmenu": true },
+    { "name": "Customers", "icon": "RiUserLine", "path": "customers", "hasSubmenu": true },
+    { "name": "Income", "icon": "RiWallet3Line", "path": "income", "hasSubmenu": true },
+    { "name": "Promote", "icon": "RiPercentLine", "path": "promote", "hasSubmenu": true },
+    { "name": "Help", "icon": "RiQuestionnaireLine", "path": "help", "hasSubmenu": true }
+  ]
+}
